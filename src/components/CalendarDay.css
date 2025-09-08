@@ -1,0 +1,94 @@
+.calendar-day {
+  background: #f7fafc;
+  min-height: 120px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.calendar-day:hover {
+  background: #edf2f7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-day.other-month {
+  background: #e2e8f0;
+  color: #a0aec0;
+}
+
+.calendar-day.today {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 700;
+}
+
+.calendar-day.selected {
+  border-color: #667eea;
+  background: #ebf4ff;
+}
+
+.day-number {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.habits-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.habit-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.habit-indicator:hover {
+  transform: scale(1.3);
+}
+
+.habit-indicator.completed {
+  opacity: 1;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.habit-indicator.not-completed {
+  opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+  .calendar-day {
+    min-height: 80px;
+    padding: 5px;
+  }
+  
+  .day-number {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-day {
+    min-height: 60px;
+    padding: 3px;
+  }
+  
+  .day-number {
+    font-size: 0.8rem;
+  }
+  
+  .habit-indicator {
+    width: 6px;
+    height: 6px;
+  }
+}
+
